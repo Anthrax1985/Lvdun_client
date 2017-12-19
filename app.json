@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index2/index2",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/employeeHome/employee",
+    "pages/custumHome/custom",
+    "pages/dailyReportSummary/dailysummary"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "绿盾生物科技",
+    "navigationBarTextStyle": "black"
+  }
+}

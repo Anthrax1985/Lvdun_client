@@ -1,0 +1,22 @@
+<!--pages/custumHome/custom.wxml-->
+<view class="custom">
+  <view class="custom_hd"></view>
+  <view class="custom_bd">
+    <view class="daily_list">
+      <view class="daily_list_head">
+        <text class="iconfont iconfront_info"></text>
+        <text class="daily_list_title">桃源小镇</text>
+      </view>
+      <view wx:for="{{items}}" wx:key="{{items.value}}">
+        <view class="daily_list_item" bindtap='bindtapView' id="{{item.value}}">
+          <image class="daily_list_item_snapshot" src='https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1513614572&di=fad38085f8352eae6079ea10edb8c16f&src=http://img4.focus.cn/upload/hz/22932/b_229311280.jpg'></image>
+          <text class="daily_list_item_title">{{item.value}}工作汇报</text>
+            <text class="iconfont iconfront_arrorw arrorw"></text>
+
+        </view>
+      </view>
+    </view>
+    
+  </view>
+
+</view>

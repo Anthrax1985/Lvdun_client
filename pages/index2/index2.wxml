@@ -1,0 +1,38 @@
+<!--index2.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{hasUserInfo}}">
+    <image class="userinfo-avatar" src='{{userInfo.avatarUrl}}'></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <block wx:else>
+      <image  class="userinfo-avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513675538871&di=0eedefe9d9366358efe72aa51dd1f89b&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Ff636afc379310a55a04c37d2bc4543a9822610af.jpg"></image>
+      <text class="userinfo-nickname">游客</text>
+    </block>
+  </view>
+  <view class="userinit">
+    <block wx:if="{{userRegisted}}">
+      <text class="register_info">{{register_msg}}</text>
+      <input class='register_input' type="number" maxlength='11' placeholder='请输入手机号码' auto-focus=''></input>
+    </block>
+    <text wx:else class="welcome">欢迎回来</text>
+  </view>
+  <view class="role_selector" wx:if="{{isTestMode}}">
+      <view class="page-section-title">[测试模式]选择进入角色(开发完成后删除）</view>
+      <view class="weui-cells weui-cells_after-title">
+        <radio-group bindchange="radioChange">
+          <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+
+            <view class="weui-cell__hd">
+              <radio value="{{item.value}}" checked="true"/>
+            </view>
+            <view class="weui-cell__bd">{{item.name}}</view>
+          </label>
+        </radio-group>
+      </view>
+  </view>
+  <view class="login">
+    <button bindtap='bindViewTap' class="base-btn login_button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+  </view>
+
+</view>
